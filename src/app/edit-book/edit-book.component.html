@@ -1,0 +1,17 @@
+<h2>Editer le livre {{bookToEdit.titre}}</h2>
+<form>
+  <div class="mb-3">
+    <label for="titre" class="form-label" >Titre</label>
+    <input type="text" class="form-control" id="titre" #t [value]="bookToEdit.titre">
+  </div>
+  <div class="mb-3">
+    <label for="auteur" class="form-label">Auteur</label>
+    <input type="text" class="form-control" id="auteur" #a [value]="bookToEdit.auteur">
+  </div>
+  <div class="mb-3">
+    <label for="prix" class="form-label">Prix</label>
+    <input type="text" class="form-control" id="prix" #p [value]="bookToEdit.prix">
+  </div>
+  <button type="button" class="btn btn-primary" (click)="editBook(t.value, a.value, +p.value)">Valider</button>
+</form>
+
